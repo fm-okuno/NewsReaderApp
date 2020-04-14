@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BC271852440311B00BC8EC8 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC271842440311B00BC8EC8 /* Item.swift */; };
 		8BF2FA72243EE0A600166EA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2FA71243EE0A600166EA1 /* AppDelegate.swift */; };
 		8BF2FA74243EE0A600166EA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2FA73243EE0A600166EA1 /* SceneDelegate.swift */; };
 		8BF2FA79243EE0A600166EA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BF2FA77243EE0A600166EA1 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B3934D12443F07300199F8B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		8BC271842440311B00BC8EC8 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		8BF2FA6E243EE0A600166EA1 /* NewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BF2FA71243EE0A600166EA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BF2FA73243EE0A600166EA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,11 +40,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B3934D02443F07300199F8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B3934D12443F07300199F8B /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8BF2FA65243EE0A600166EA1 = {
 			isa = PBXGroup;
 			children = (
 				8BF2FA70243EE0A600166EA1 /* NewsReader */,
 				8BF2FA6F243EE0A600166EA1 /* Products */,
+				8B3934D02443F07300199F8B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +75,7 @@
 				8BF2FA7C243EE0A700166EA1 /* LaunchScreen.storyboard */,
 				8BF2FA7F243EE0A700166EA1 /* Info.plist */,
 				8BF2FA85243EE1A300166EA1 /* ListViewController.swift */,
+				8BC271842440311B00BC8EC8 /* Item.swift */,
 			);
 			path = NewsReader;
 			sourceTree = "<group>";
@@ -138,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BC271852440311B00BC8EC8 /* Item.swift in Sources */,
 				8BF2FA72243EE0A600166EA1 /* AppDelegate.swift in Sources */,
 				8BF2FA74243EE0A600166EA1 /* SceneDelegate.swift in Sources */,
 				8BF2FA86243EE1A300166EA1 /* ListViewController.swift in Sources */,
