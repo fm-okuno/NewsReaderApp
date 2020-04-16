@@ -12,6 +12,7 @@ import WebKit
 //UIViewControllerクラスを継承したDetailViewControllerクラスを宣言
 class DetailViewController : UIViewController {
     
+    @IBOutlet weak var webView: WKWebView!
     var link:String!
     
     override func viewDidLoad() {
@@ -25,7 +26,4 @@ class DetailViewController : UIViewController {
             self.webView.load(request)
         }
     }
-    
-    @IBOutlet weak var webView: WKWebView!
-    
 }
