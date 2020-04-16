@@ -8,7 +8,7 @@
 
 import UIKit
 
-//XMLPerserクラスのデリゲートになる為のXMLPerserDelegateをほ批准
+//XMLPerserクラスのデリゲートになる為のXMLPerserDelegateを批准
 class ListViewController: UITableViewController, XMLParserDelegate {
     
     //RSSデータ解析の為のXMLPerserクラスのインスタンス格納の為のparserプロパティ
@@ -63,7 +63,6 @@ class ListViewController: UITableViewController, XMLParserDelegate {
                 namespaceURI: String?,
                 qualifiedName qName: String?,
                 attributes attributeDict: [String : String]) {
-        //ニュース記事の要素名からitemを見つける
         //一時的に要素を保存する為の変数currentStringを空にする
         self.currentString = ""
         //RSSデータの要素名を文字列「item」と比較し、要素名がitemのデータのみを取得
@@ -95,6 +94,19 @@ class ListViewController: UITableViewController, XMLParserDelegate {
     func parserDidEndDocument(_ parser: XMLParser) {
         //reloadDataメソッドを実行する事で24,30行目のメソッドが再実行され、データが表示される
         self.tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //ユーザーがタップしたセルのindexPathを取得
+        if let indexPath = self.tableView.indexPathForSelectedRow {
+            let item = items[indexPath.row]
+            //定数controllerには、遷移先のビューコントローラーが格納されている
+            let controller = segue.destination as! DetailViewController
+            //遷移先の(DetailViewController)のtitleプロパティに記事のタイトルを格納
+            controller.title = item.title
+            //DetailViewControllerのlinkプロパティに記事のURLを格納
+            controller.link = item.link
+        }
     }
 }
 
